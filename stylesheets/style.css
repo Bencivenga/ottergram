@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'lakeshore';
+  font-weight: normal;
+  font-style: normal;
+  src: local('LAKESHOR'), url('fonts/LAKESHOR-webfont.woff2') format('woff2'), url('fonts/LAKESHOR-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'airstreamregular';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Airstream'), url('fonts/Airstream-webfont.woff2') format('woff2'), url('fonts/Airstream-webfont.woff') format('woff');
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  background-color: rgb(149, 194, 215);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.logo-text {
+  font-family: lakeshore;
+  font-size: 37px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ffffff;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.thumbnail-list {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  list-style: none;
+  order: 2;
+  padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.thumbnail-item {
+  display: inline-block;
+  min-width: 120px;
+  max-width: 120px;
+  border: 1px solid rgba(100%, 100%, 100%, 0.8);
+}
+
+.thumbnail-image {
+  display: block;
+  width: 100%;
+}
+
+.thumbnail-title {
+  display: block;
+  font-size: 18px;
+  margin: 0;
+  padding: 4px 10px;
+  background-color: rgb(96, 125, 139);
+  color: rgb(202, 238, 255);
+}
+
+.detail-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.detail-image-frame {
+  position: relative;
+  text-align: center;
+}
+
+.detail-image {
+  width: 90%;
+}
+
+
+.detail-image-title {
+  position: absolute;
+  bottom: -16px;
+  left: 4px;
+  font-family: airstreamregular;
+  font-size: 40px;
+  color: #ffffff;
+  text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+}
+
+@media all and (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .thumbnail-list {
+    flex-direction: column;
+    order: 0;
+    margin-left: 20px;
+  }
+
+  .thumbnail-item {
+    max-width: 260px;
+  }
+
+  .thumbnail-item + .thumbnail-item {
+    margin-top: 20px;
+  }
+}
