@@ -1,2 +1,2 @@
 # ottergram
-Nice photo gallery with otters
+Nice photo gallery for otters
